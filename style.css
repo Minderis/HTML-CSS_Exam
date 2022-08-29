@@ -6,11 +6,13 @@
     --smalltext: #555555;
     --cardbackground: #eeeeee;
     --cardseries: #fe8039;
+    --mobilepadding: 8vw;
+    --desktoppadding: 5vw;
 } 
 
 header, footer {
-    padding-left: 8vw;
-    padding-right: 8vw;
+    padding-left: var(--mobilepadding);
+    padding-right: var(--mobilepadding);
 }
 
 header {
@@ -36,8 +38,8 @@ nav {
 
 
 .container {
-    padding-left: 8vw;
-    padding-right: 8vw;
+    padding-left: var(--mobilepadding);
+    padding-right: var(--mobilepadding);
     display: flex;
 }
 
@@ -126,9 +128,8 @@ nav {
     background-position: 20% 100%; 
     background-size: cover;
     background-repeat: no-repeat; 
-    padding-left: 8vw;
-    padding-right: 8vw;
-    justify-content: flex-end;
+    padding-left: var(--mobilepadding);
+    padding-right: var(--mobilepadding);
     height: 420px;
     padding-bottom: 30px;
     margin-top: 110px;
@@ -182,7 +183,6 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 50px;
-    /*min-height: 550px;*/
 }
 
 .card {
@@ -312,7 +312,28 @@ nav {
     letter-spacing: 1px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 720px) {
+
+    header, footer {
+        padding-left: var(--desktoppadding);
+        padding-right: var(--desktoppadding);
+    }
+
+    header {
+        padding-top: 30px;
+        padding-bottom: 110px;
+    }
+
+    .container {
+        padding-left: var(--desktoppadding);
+        padding-right: var(--desktoppadding);
+    }
+
+    .button {
+        width: 200px;
+        height: 80px;
+    }
+
     #hamburger {
         display: none;
     }
@@ -321,8 +342,159 @@ nav {
         display: flex;
     }
 
+    .logo {
+        width: auto;
+    }
+
+    #menu > div {
+        margin-left: 30px;
+        font-size: 20px;
+    }
+
+    #first_graphic {
+        width: 850px;
+        margin-top: -100px;
+        margin-left: -70px;
+    }
+
+    #second_graphic {
+        height: 550px;
+        margin-top: 0px;
+        margin-left: 250px;
+    }
+
     .greyline {
         display: none;
+    }
+
+    .smalltext {
+        padding-top: 0px;
+        font-size: 20px;
+        letter-spacing: 0.1rem;
+        max-width: 600px;
+    }
+
+    .pink {
+        color: var(--pink);
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .background_container {
+        background-size: contain;
+        background-position: fixed; 
+        margin-left: var(--desktoppadding);
+        margin-right: var(--desktoppadding);
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .bigtext {
+        font-size: 2.8rem;
+    }
+
+    .hidden {
+        display: flex;
+    }
+
+    .cutimg {
+        object-fit: contain; 
+    }
+
+    .company {
+        width: auto;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+    .container.column > .smalltext {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        min-width: 325px;
+        margin-right: 40px;
+    }
+
+    .firstcardline * {
+        font-size: 13px;
+    }
+    
+    .secondcardline * {
+        font-size: 22px;
+        padding-top: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .thirdcardline * {
+        font-size: 18px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    
+    .iconprice {
+        min-width: 125px;
+    }
+    
+    .nfticon {
+        height: 70%;
+    }
+
+    .background_container .black {
+        padding-bottom: 20px;
+        padding-top: 15px;
+        font-size: 18px;
+    }
+
+    .smalltext.smallerbox {
+        max-width: 600px;
+    }
+
+    .title {
+        width: 700px;
+        font-size: 7rem;
+    }
+
+    .bigger {
+        font-size: 4rem;
+        line-height: 100%;
+        letter-spacing: 1px;
+    }
+
+    #background {
+        margin-bottom: 60px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+    }
+
+    .footersection {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .footersection > p {
+        margin-left: 0px;
+        margin-right: 0px;
+        justify-items: right;
+    }
+
+    .footer_container {
+        justify-content: flex-end;
+        max-width: 700px;
+    }
+
+    footer {
+        margin-top: 50px;
+        font-size: 22px;
+    }
+
+    .marginzero {
+        margin: 0;
     }
 }
 
