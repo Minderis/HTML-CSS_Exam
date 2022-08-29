@@ -36,7 +36,6 @@ nav {
     align-content: center;
 }
 
-
 .container {
     padding-left: var(--mobilepadding);
     padding-right: var(--mobilepadding);
@@ -313,7 +312,6 @@ nav {
 }
 
 @media screen and (min-width: 720px) {
-
     header, footer {
         padding-left: var(--desktoppadding);
         padding-right: var(--desktoppadding);
